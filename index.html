@@ -14,7 +14,7 @@
      <!-- ========== Favicon Icon ========== -->
      <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
  
-     <script src="https://cdn.tailwindcss.com"></script>
+       <!-- <script src="https://cdn.tailwindcss.com"></script>   -->
 
     <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -41,6 +41,94 @@
     
 }
 
+
+
+
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 20px;
+    padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .image-container {
+        flex-direction: row;
+        padding: 0 5rem;
+    }
+}
+
+/* Big image */
+.big-image {
+    width: 100%;
+    background-color: black;
+    margin-bottom: 0.5rem;
+}
+
+.big-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .big-image {
+        width: 40%;
+        margin-bottom: 0;
+    }
+}
+
+/* Image collection */
+.image-collection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .image-collection {
+        width: 60%;
+    }
+}
+
+/* Upper section */
+.upper-section {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.image-wrapper {
+    width: 50%;
+    background-color: #f59e0b; /* Yellow color */
+    margin-bottom: 0.5rem;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .upper-section {
+        height: 50%;
+    }
+    .image-wrapper {
+        margin-bottom: 0;
+    }
+}
+
+
     </style>
     <!-- ========== End Stylesheet ========== -->
 
@@ -52,79 +140,7 @@
 
 <body>
 
-    <!-- Start Preloader 
-    ============================================= -->
-    <!-- <div id="preloader">
-        <div id="agrica-preloader" class="agrica-preloader">
-            <div class="animation-preloader">
-                <div class="spinner"></div>
-            </div>
-            <div class="loader">
-                <div class="row">
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Preloader -->
-
-    <!-- Start Header Top 
-    ============================================= -->
-    <!-- <div class="top-bar-area top-bar-style-one bg-dark text-light">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-8">
-                    <ul class="item-flex">
-                        <li>
-                            <i class="fas fa-clock"></i> Opening Hours : Sunday- Friday, 08:00 am - 05:00pm
-                        </li>
-                        <li>
-                            <a href="tel:+4733378901"><i class="fas fa-phone-alt"></i> +4733378901</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 text-end">
-                    <div class="social">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Header Top -->
-
+    
       <!-- Header 
     ============================================= -->
     <header>
@@ -147,8 +163,36 @@
                     <!-- End Header Navigation -->
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <!-- <div class="collapse navbar-collapse" id="navbar-menu">
+               <!-- <div class=" flex item-center gap-10">
+                    <a href="index.html">
+                        <h1>Home</h1>
+                    </a>
+                    <a href="Plants.html">
+
+                        <h1>Plants</h1>
+                    </a>
+                    <a href="Seeds.html">
+
+                        <h1>Seeds</h1>
+                    </a>
+                    <a href="ManureandFertailizer.html">
+
+                        <h1>Manure & Fertailizer</h1>
+                    </a>
+                    <a href="Pebbles.html">
+
+                        <h1>Pebbles</h1>
+                    </a>
+                    <a href="Pebbles.html">
+
+                        <h1>Pots</h1>
+                    </a>
+                </div> -->
+
+
+
+
+                  <div class="collapse navbar-collapse" id="navbar-menu">
 
                     <img src="assets/img/logo.png" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -186,34 +230,7 @@
                         
 
                     </ul>
-                </div> -->
-
-                <div class=" flex item-center gap-10">
-                    <a href="index.html">
-                        <h1>Home</h1>
-                    </a>
-                    <a href="Plants.html">
-
-                        <h1>Plants</h1>
-                    </a>
-                    <a href="Seeds.html">
-
-                        <h1>Seeds</h1>
-                    </a>
-                    <a href="ManureandFertailizer.html">
-
-                        <h1>Manure & Fertailizer</h1>
-                    </a>
-                    <a href="Pebbles.html">
-
-                        <h1>Pebbles</h1>
-                    </a>
-                    <a href="Pebbles.html">
-
-                        <h1>Pots</h1>
-                    </a>
-                </div>
-
+                </div> 
          
                 
 
@@ -232,41 +249,7 @@
                                  <img    width="30" src="/assets/img/instagram.png" alt="">
                                 </a>
                             </li>
-                                <!-- <ul class="dropdown-menu cart-list">
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#" class="photo">
-                                                <img src="assets/img/products/1.png" alt="Thumb">
-                                            </a>
-                                            <a href="#" class="remove-product">
-                                                <i class="fas fa-times"></i>
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <h6><a href="#">Delica omtantur </a></h6>
-                                            <p>2x - <span class="price">$99.99</span></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#" class="photo">
-                                                <img src="assets/img/products/2.png" alt="Thumb">
-                                            </a>
-                                            <a href="#" class="remove-product">
-                                                <i class="fas fa-times"></i>
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <h6><a href="#">Omnes ocurreret</a></h6>
-                                            <p>1x - <span class="price">$33.33</span></p>
-                                        </div>
-                                    </li>
-                                    <li class="total">
-                                        <span class="pull-right"><strong>Total</strong>: $0.00</span>
-                                        <a href="#" class="btn btn-default btn-cart">Cart</a>
-                                        <a href="#" class="btn btn-default btn-cart">Checkout</a>
-                                    </li>
-                                </ul>   -->
+                             
                              
                             <li    class="button"><a href="tel:+916282124181">Contact Us</a></li>
                         </ul>
@@ -287,97 +270,29 @@
     <!-- End Header -->
 
 
-    <!-- Start Banner Area 
-    ============================================= -->
  
-<!--  
-    <div class="gallery">
-        <div class="large-image">
-            <a href="Plants.html" target="_blank">
-                <img src="/assets/img/Gallery/1.jpg" alt="Large Image">
-            </a>
+
+    <div class="image-container">
+        <div class="big-image">
+            <img src="/assets/img/Gallery/1.jpg" alt="Image 1">
         </div>
-        <div class="small-images">
-            <div class="small-image">
-                <a href="ManureandFertailizer.html" target="_blank">
-                    <img src="/assets/img/Gallery/2.jpg" alt="Small Image 1">
-                </a>
-            </div>
-            <div class="small-image">
-                <a href="/path-to-small-image-2.jpg" target="_blank">
-                    <img src="/assets/img/Gallery/3.jpg" alt="Small Image 2">
-                </a>
-            </div>
-            <div class="small-image">
-                <a href="Seeds.html" target="_blank">
-                    <img src="/assets/img/Gallery/4.jpg" alt="Small Image 3">
-                </a>
-            </div>
-            <div class="small-image">
-                <a href="/path-to-small-image-4.jpg" target="_blank">
-                    <img src="/assets/img/Gallery/5.jpg" alt="Small Image 4">
-                </a>
-            </div>
-        </div>
-    </div>   -->
-
-
-
-
-<!-- 
-    <div class="ads-section">
-        <div class="inner-section">
-            <div class="img-section1">
-                <img class="img" src="/assets/img/Gallery/1.jpg" alt="">
-            </div>
-            <div class="img-section2">
-                <div class="inner-img-section2">
-                    <img class="img" src="/assets/img/Gallery/2.jpg" alt="">
+        <div class="image-collection">
+            <div class="upper-section">
+                <div class="image-wrapper">
+                    <img src="/assets/img/Gallery/2.jpg" alt="Image 2">
                 </div>
-                <div class="inner-img-section2">
-                    <img height="200" class="img" src="/assets/img/Gallery/3.jpg" alt="">
+                <div class="image-wrapper">
+                    <img src="/assets/img/Gallery/3.jpg" alt="Image 3">
                 </div>
             </div>
-            <div class="img-section2">
-                <div class="inner-img-section2">
-                    <img class="img" src="/assets/img/Gallery/4.jpg" alt="">
+            <div class="upper-section">
+                <div class="image-wrapper">
+                    <img src="/assets/img/Gallery/4.jpg" alt="Image 4">
                 </div>
-                <div class="inner-img-section2">
-                    <img class="img" src="/assets/img/Gallery/5.jpg" alt="">
+                <div class="image-wrapper">
+                    <img src="/assets/img/Gallery/5.jpg" alt="Image 5">
                 </div>
             </div>
-        </div>
-    </div> -->
-
-    <div class=" image-container w-full md:flex md:item-center gap-3 mt-20 px-5 md:px-20">
-        <div class="big-image md:w-2/5 mb-2 md:mb-0  bg-black">
-            <img src="/assets/img/Gallery/1.jpg" alt="" class="w-full h-full object-cover">
-        </div>
-        <div class="image-collection md:w-5/5  md:flex md:flex-col gap-3">
-            <div class="upper-section w-full h-[50%] md:flex md:item-center gap-3">
-                <div class=" md:w-1/2 mb-2 md:mb-0 h-full bg-yellow-500">
-
-                    <img src="/assets/img/Gallery/2.jpg" alt="" class="w-full h-full object-cover">
-                </div>
-                <div class="md:w-1/2 mb-2 md:mb-0 h-full bg-yellow-500">
-
-                    <img src="/assets/img/Gallery/3.jpg" alt="" class="w-full h-full object-cover">
-                </div>
-                
-            </div>
-            <div class="upper-section w-full h-[50%] md:flex md:item-center gap-3">
-                <div class=" md:w-1/2 mb-2 md:mb-0 h-full bg-yellow-500">
-
-                    <img src="/assets/img/Gallery/4.jpg" alt="" class="w-full h-full object-cover">
-                </div>
-                <div class="md:w-1/2 mb-2 md:mb-0 h-full bg-yellow-500">
-
-                    <img src="/assets/img/Gallery/5.jpg" alt="" class="w-full h-full object-cover">
-                </div>
-                
-            </div>
-         
-        
         </div>
     </div>
  
