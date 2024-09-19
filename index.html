@@ -3,17 +3,18 @@
 
 <head>
     <!-- ========== Meta Tags ========== -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Agrica - Organic Farm Agriculture Template">
 
-    <!-- ========== Page Title ========== -->
-    <title>My Plant Factory </title>
+     <!-- ========== Page Title ========== -->
+     <title>My Plant Factory </title>
 
-    <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+     <!-- ========== Favicon Icon ========== -->
+     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+ 
+     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -27,31 +28,26 @@
     <link href="assets/css/unit-test.css" rel="stylesheet">
     <link href="assets/css/shop.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">  
-  <!-- <link href="assets/css/gallery.css" rel="stylesheet">   -->
+    <link href="style.css" rel="stylesheet">
+    <script type="module" src="plants.js"></script>
 
-
-    
 
     <style>
-    .product-img {
+        .product-img {
     width: 280px; /* Set a fixed width */
     height: 150px; /* Set a fixed height */
     object-fit: cover; /* Ensures the image covers the area without distortion */
-    }
-
-
 
     
+}
 
     </style>
-
     <!-- ========== End Stylesheet ========== -->
 
     <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
-
+  
 </head>
 
 <body>
@@ -83,9 +79,53 @@
     </div> -->
     <!-- End Preloader -->
 
-   
+    <!-- Start Header Top 
+    ============================================= -->
+    <!-- <div class="top-bar-area top-bar-style-one bg-dark text-light">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-8">
+                    <ul class="item-flex">
+                        <li>
+                            <i class="fas fa-clock"></i> Opening Hours : Sunday- Friday, 08:00 am - 05:00pm
+                        </li>
+                        <li>
+                            <a href="tel:+4733378901"><i class="fas fa-phone-alt"></i> +4733378901</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="social">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- End Header Top -->
 
-    <!-- Header 
+      <!-- Header 
     ============================================= -->
     <header>
         <!-- Start Navigation -->
@@ -108,21 +148,21 @@
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
+                <!-- <div class="collapse navbar-collapse" id="navbar-menu">
 
                     <img src="assets/img/logo.png" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
                     
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-right list disc" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="dropdown">
                             <a href="index.html"  data-toggle="dropdown" >Home</a>
-                            <!-- <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
                                 <li><a href="index.html">Home Agriculture</a></li>
                                 <li><a href="index-2.html">Home Farming</a></li>
                                 <li><a href="index-3.html">Agriculture Shop</a></li>
-                            </ul> -->
+                            </ul> 
                         </li>
 
                         <li class="dropdown">
@@ -144,55 +184,35 @@
                             <a href="Pots.html"   data-toggle="dropdown" >Pots</a>
                         </li>
                         
-                       
 
-
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Pages</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="farmers.html">Team</a></li>
-                                <li><a href="farmer-details.html">Team Details</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="404.html">Error Page</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="dropdown">
-                            <a href="project.html" class="dropdown-toggle" data-toggle="dropdown" >Projects</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="project.html">Project</a></li>
-                                <li><a href="project-details.html">Project Details</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="services.html">Services Version One</a></li>
-                                <li><a href="services-2.html">Services Version Two</a></li>
-                                <li><a href="services-details.html">Services Details</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-standard.html">Blog Standard</a></li>
-                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                                <li><a href="blog-2-colum.html">Blog Grid Two Colum</a></li>
-                                <li><a href="blog-3-colum.html">Blog Grid Three Colum</a></li>
-                                <li><a href="blog-single.html">Blog Single</a></li>
-                                <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Shop</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="shop.html">Shop Product</a></li>
-                                <li><a href="shop-single.html">Shop Single</a></li>
-                                <li><a href="shop-single-thumb-only.html">Shop Single Version Two</a></li>
-                            </ul>
-                        </li> -->
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div> -->
+
+                <div class=" flex item-center gap-10">
+                    <a href="index.html">
+                        <h1>Home</h1>
+                    </a>
+                    <a href="Plants.html">
+
+                        <h1>Plants</h1>
+                    </a>
+                    <a href="Seeds.html">
+
+                        <h1>Seeds</h1>
+                    </a>
+                    <a href="ManureandFertailizer.html">
+
+                        <h1>Manure & Fertailizer</h1>
+                    </a>
+                    <a href="Pebbles.html">
+
+                        <h1>Pebbles</h1>
+                    </a>
+                    <a href="Pebbles.html">
+
+                        <h1>Pots</h1>
+                    </a>
+                </div>
 
          
                 
@@ -266,21 +286,10 @@
     </header>
     <!-- End Header -->
 
+
     <!-- Start Banner Area 
     ============================================= -->
-     
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 <!--  
     <div class="gallery">
         <div class="large-image">
