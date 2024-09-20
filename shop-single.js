@@ -42,34 +42,37 @@ get(productRef).then((snapshot) => {
         const swiperWrapper = document.getElementById('swiper-wrapper');
         swiperWrapper.innerHTML = ''; // Clear any existing slides
 
-        if (productData.imageUrls && typeof productData.imageUrls === 'object') {
-            Object.values(productData.imageUrls).forEach((url, index) => {
-                console.log('Image URL:', url); // Debug URL
-                
-                // Create carousel item
-                const isActive = index === 0 ? 'active' : '';
-                const carouselItem = document.createElement('div');
-                carouselItem.className = `carousel-item ${isActive}`;
-                carouselItem.innerHTML = `
-                     <a href="${url}" class="item popup-gallery">
-                        <img src="${url}" alt="Product Image" class="d-block w-100">
-                    </a>
-                `;
-                carouselInner.appendChild(carouselItem);
+       if (productData.imageUrls && typeof productData.imageUrls === 'object') {
+    Object.values(productData.imageUrls).forEach((url, index) => {
+        if (url && typeof url === 'string' && url.trim() !== '') {
+            // Create carousel item
+            const isActive = index === 0 ? 'active' : '';
+            const carouselItem = document.createElement('div');
+            carouselItem.className = `carousel-item ${isActive}`;
+            carouselItem.innerHTML = `
+                <a href="${url}" class="item popup-gallery">
+                    <img src="${url}" alt="Product Image" class="d-block w-100">
+                </a>
+            `;
+            carouselInner.appendChild(carouselItem);
 
-                // Create Swiper slide
-                const swiperSlide = document.createElement('div');
-                swiperSlide.className = `swiper-slide ${isActive}`;
-                swiperSlide.innerHTML = `
-                    <div class="item" data-bs-target="#timeline-carousel" data-bs-slide-to="${index}" aria-current="${index === 0 ? 'true' : 'false'}">
-                        <img src="${url}" alt="Product Image" class="d-block w-100">
-                    </div>
-                `;
-                swiperWrapper.appendChild(swiperSlide);
-            });
+            // Create Swiper slide
+            const swiperSlide = document.createElement('div');
+            swiperSlide.className = `swiper-slide ${isActive}`;
+            swiperSlide.innerHTML = `
+                <div class="item" data-bs-target="#timeline-carousel" data-bs-slide-to="${index}" aria-current="${index === 0 ? 'true' : 'false'}">
+                    <img src="${url}" alt="Product Image" class="d-block w-100">
+                </div>
+            `;
+            swiperWrapper.appendChild(swiperSlide);
         } else {
-            console.log("No images available");
+            console.log('Invalid or missing image URL:', url);
         }
+    });
+} else {
+    console.log("No images available");
+}
+
 
         // Display short descriptions as list items with custom bullet
         const shortDescriptionList = document.getElementById('short-description-list');
