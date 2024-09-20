@@ -42,24 +42,12 @@ get(productRef).then((snapshot) => {
         const swiperWrapper = document.getElementById('swiper-wrapper');
         swiperWrapper.innerHTML = ''; // Clear any existing slides
 
-     // 1. Check if images are actually loaded
-function checkImageLoaded(url) {
-    return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = url;
-    });
-}
-
-// 2. Modify the image loading part of your code
-if (productData.imageUrls && typeof productData.imageUrls === 'object') {
-    const imagePromises = Object.values(productData.imageUrls).map(async (url, index) => {
-        if (url && typeof url === 'string' && url.trim() !== '') {
-            const isLoaded = await checkImageLoaded(url);
-            if (isLoaded) {
-                const isActive = index === 0 ? 'active' : '';
+        if (productData.imageUrls && typeof productData.imageUrls === 'object') {
+            Object.values(productData.imageUrls).forEach((url, index) => {
+                console.log('Image URL:', url); // Debug URL
+                
                 // Create carousel item
+                const isActive = index === 0 ? 'active' : '';
                 const carouselItem = document.createElement('div');
                 carouselItem.className = `carousel-item ${isActive}`;
                 carouselItem.innerHTML = `
@@ -78,30 +66,10 @@ if (productData.imageUrls && typeof productData.imageUrls === 'object') {
                     </div>
                 `;
                 swiperWrapper.appendChild(swiperSlide);
-            } else {
-                console.log('Failed to load image:', url);
-                // Optionally, add a placeholder or error message
-            }
+            });
         } else {
-            console.log('Invalid or missing image URL:', url);
+            console.log("No images available");
         }
-    });
-
-    // Wait for all images to be processed
-    await Promise.all(imagePromises);
-
-    // 3. Initialize or update Swiper after images are loaded
-    if (typeof Swiper !== 'undefined') {
-        new Swiper('.swiper-container', {
-            // your Swiper options here
-        });
-    } else {
-        console.error('Swiper is not defined. Make sure you have included the Swiper library.');
-    }
-} else {
-    console.log("No images available");
-}
-        
 
         // Display short descriptions as list items with custom bullet
         const shortDescriptionList = document.getElementById('short-description-list');
