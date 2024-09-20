@@ -51,7 +51,7 @@ get(productRef).then((snapshot) => {
                 const carouselItem = document.createElement('div');
                 carouselItem.className = `carousel-item ${isActive}`;
                 carouselItem.innerHTML = `
-                    <a href="${url}" class="item popup-gallery">
+                     <a href="${url}" class="item popup-gallery">
                         <img src="${url}" alt="Product Image" class="d-block w-100">
                     </a>
                 `;
