@@ -110,7 +110,52 @@ get(productRef).then((snapshot) => {
 
 ///////////////////////////////////
 
-
+// 1. Ensure the element exists
+document.addEventListener('DOMContentLoaded', function() {
+    if (!document.querySelector('.animation-shape')) {
+      console.warn('Element .animation-shape not found in the DOM');
+    }
+  });
+  
+  // 2. Delay GSAP initialization
+  window.addEventListener('load', function() {
+    // GSAP and ScrollTrigger initialization code here
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.to('.animation-shape', {
+      scrollTrigger: {
+        trigger: '.animation-shape',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      },
+      // Your animation properties here
+      x: 100,
+      rotation: 360,
+      duration: 2
+    });
+  });
+  
+  // 3. Check if element exists before animating
+  function animateShape() {
+    const shape = document.querySelector('.animation-shape');
+    if (shape) {
+      gsap.to(shape, {
+        // Your animation properties here
+      });
+    } else {
+      console.warn('Element .animation-shape not found, animation skipped');
+    }
+  }
+  
+ 
+  
+  // 5. Create the element dynamically if it's missing
+  if (!document.querySelector('.animation-shape')) {
+    const shape = document.createElement('div');
+    shape.classList.add('animation-shape');
+    document.body.appendChild(shape);
+  }
   ///////////////////////////////////
 
 ///////////////////////////////////
