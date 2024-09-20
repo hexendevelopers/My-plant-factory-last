@@ -34,44 +34,7 @@
     <![endif]-->
 
     <style>
-        /* Ensure images are visible on all devices */
-.carousel-item img,
-.swiper-slide img {
-  max-width: 100%;
-  height: auto;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Specific styles for desktop */
-@media screen and (min-width: 1024px) {
-  .carousel-item,
-  .swiper-slide {
-    width: 100% !important;
-    opacity: 1 !important;
-  }
-
-  #carousel-inner,
-  #swiper-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-
-  .carousel-item .item img,
-  .swiper-slide .item img {
-    object-fit: contain;
-    max-height: 500px; /* Adjust as needed */
-  }
-}
-
-/* Fix for potential z-index issues */
-.carousel,
-.swiper-container {
-  z-index: 1;
-  position: relative;
-}
+        
     </style>
  
 </head>
