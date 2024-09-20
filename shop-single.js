@@ -52,7 +52,7 @@ get(productRef).then((snapshot) => {
                 carouselItem.className = `carousel-item ${isActive}`;
                 carouselItem.innerHTML = `
                     <a href="${url}" class="item popup-gallery">
-                        <img src="${url}" alt="Product Image" class="d-block w-100">
+                        <img src="${url}" alt="Product Image"  style="width: 80%; height: auto;">
                     </a>
                 `;
                 carouselInner.appendChild(carouselItem);
@@ -62,7 +62,7 @@ get(productRef).then((snapshot) => {
                 swiperSlide.className = `swiper-slide ${isActive}`;
                 swiperSlide.innerHTML = `
                     <div class="item" data-bs-target="#timeline-carousel" data-bs-slide-to="${index}" aria-current="${index === 0 ? 'true' : 'false'}">
-                        <img src="${url}" alt="Product Image" class="d-block w-100">
+                        <img  src="${url}" alt="Product Image" class="d-block w-100">
                     </div>
                 `;
                 swiperWrapper.appendChild(swiperSlide);
