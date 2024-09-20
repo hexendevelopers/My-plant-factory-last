@@ -55,16 +55,12 @@ get(productRef).then((snapshot) => {
                         </a>
                     `;
                     carouselInner.appendChild(carouselItem);
-
-                    setTimeout(() => {
-                        $('#timeline-carousel').carousel();
-                    }, 100);  // Adjust delay if needed
         
                     // Create Swiper slide
                     const swiperSlide = document.createElement('div');
                     swiperSlide.className = `swiper-slide ${isActive}`;
                     swiperSlide.innerHTML = `
-                         <div class="item" data-bs-target="#timeline-carousel" data-bs-slide-to="${index}" aria-current="${index === 0 ? 'true' : 'false'}">
+                        <div class="item" data-bs-target="#timeline-carousel" data-bs-slide-to="${index}" aria-current="${index === 0 ? 'true' : 'false'}">
                             <img src="${url}" alt="Product Image" class="d-block w-100">
                         </div>
                     `;
