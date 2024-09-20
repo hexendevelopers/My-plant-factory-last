@@ -126,6 +126,8 @@
 
       <!-- Header 
     ============================================= -->
+    <!-- Header 
+    ============================================= -->
     <header>
         <!-- Start Navigation -->
         <nav class="navbar mobile-sidenav inc-shape navbar-sticky navbar-default validnavs dark">
@@ -146,22 +148,58 @@
                     <!-- End Header Navigation -->
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
+
+                 <!-- Add this new div for the search bar -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <div id="search-results" class="search-results-dropdown"></div>
+        </div>
+        
+
+               <!-- <div class=" flex item-center gap-10">
+                    <a href="index.html">
+                        <h1>Home</h1>
+                    </a>
+                    <a href="Plants.html">
+
+                        <h1>Plants</h1>
+                    </a>
+                    <a href="Seeds.html">
+
+                        <h1>Seeds</h1>
+                    </a>
+                    <a href="ManureandFertailizer.html">
+
+                        <h1>Manure & Fertailizer</h1>
+                    </a>
+                    <a href="Pebbles.html">
+
+                        <h1>Pebbles</h1>
+                    </a>
+                    <a href="Pebbles.html">
+
+                        <h1>Pots</h1>
+                    </a>
+                </div> -->
+
+
+
+
+                  <div class="collapse navbar-collapse" id="navbar-menu">
 
                     <img src="assets/img/logo.png" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
                     
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-right list disc" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="dropdown">
                             <a href="index.html"  data-toggle="dropdown" >Home</a>
                             <!-- <ul class="dropdown-menu">
                                 <li><a href="index.html">Home Agriculture</a></li>
                                 <li><a href="index-2.html">Home Farming</a></li>
                                 <li><a href="index-3.html">Agriculture Shop</a></li>
-                            </ul> -->
+                            </ul>  -->
                         </li>
 
                         <li class="dropdown">
@@ -183,56 +221,9 @@
                             <a href="Pots.html"   data-toggle="dropdown" >Pots</a>
                         </li>
                         
-                       
 
-
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Pages</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="farmers.html">Team</a></li>
-                                <li><a href="farmer-details.html">Team Details</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="404.html">Error Page</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="dropdown">
-                            <a href="project.html" class="dropdown-toggle" data-toggle="dropdown" >Projects</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="project.html">Project</a></li>
-                                <li><a href="project-details.html">Project Details</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="services.html">Services Version One</a></li>
-                                <li><a href="services-2.html">Services Version Two</a></li>
-                                <li><a href="services-details.html">Services Details</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-standard.html">Blog Standard</a></li>
-                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                                <li><a href="blog-2-colum.html">Blog Grid Two Colum</a></li>
-                                <li><a href="blog-3-colum.html">Blog Grid Three Colum</a></li>
-                                <li><a href="blog-single.html">Blog Single</a></li>
-                                <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Shop</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="shop.html">Shop Product</a></li>
-                                <li><a href="shop-single.html">Shop Single</a></li>
-                                <li><a href="shop-single-thumb-only.html">Shop Single Version Two</a></li>
-                            </ul>
-                        </li> -->
                     </ul>
-                </div><!-- /.navbar-collapse -->
-
+                </div> 
          
                 
 
@@ -251,41 +242,7 @@
                                  <img    width="30" src="/assets/img/instagram.png" alt="">
                                 </a>
                             </li>
-                                <!-- <ul class="dropdown-menu cart-list">
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#" class="photo">
-                                                <img src="assets/img/products/1.png" alt="Thumb">
-                                            </a>
-                                            <a href="#" class="remove-product">
-                                                <i class="fas fa-times"></i>
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <h6><a href="#">Delica omtantur </a></h6>
-                                            <p>2x - <span class="price">$99.99</span></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#" class="photo">
-                                                <img src="assets/img/products/2.png" alt="Thumb">
-                                            </a>
-                                            <a href="#" class="remove-product">
-                                                <i class="fas fa-times"></i>
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <h6><a href="#">Omnes ocurreret</a></h6>
-                                            <p>1x - <span class="price">$33.33</span></p>
-                                        </div>
-                                    </li>
-                                    <li class="total">
-                                        <span class="pull-right"><strong>Total</strong>: $0.00</span>
-                                        <a href="#" class="btn btn-default btn-cart">Cart</a>
-                                        <a href="#" class="btn btn-default btn-cart">Checkout</a>
-                                    </li>
-                                </ul>   -->
+                             
                              
                             <li    class="button"><a href="tel:+916282124181">Contact Us</a></li>
                         </ul>
@@ -303,6 +260,7 @@
         </nav>
         <!-- End Navigation -->
     </header>
+    <!-- End Header -->
     <!-- End Header -->
 
     <!-- Start Banner Area 
