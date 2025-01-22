@@ -33,7 +33,11 @@ async function loadProducts() {
             const sortedProducts = Object.keys(products).map(key => ({
                 key,
                 ...products[key]
-            })).sort((a, b) => a.name.localeCompare(b.name));
+            })).sort((a, b) => {
+                const nameA = a.name || '';
+                const nameB = b.name || '';
+                return nameA.localeCompare(nameB);
+            });
 
             // Iterate through sorted products
             sortedProducts.forEach(product => {
