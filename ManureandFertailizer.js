@@ -11,6 +11,8 @@ const firebaseConfig = {
     appId: "1:65045588499:web:b9cb8c5cbd138f19ae6de6"
 };
 
+ 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
@@ -21,7 +23,7 @@ async function loadProducts() {
     
     try {
         // Get products from Firebase database
-        const snapshot = await get(ref(db, 'products/'));
+        const snapshot = await get(ref(db, 'Manure & Fertilizer/'));
         
         if (snapshot.exists()) {
             const products = snapshot.val();
@@ -33,8 +35,8 @@ async function loadProducts() {
             Object.keys(products).forEach(key => {
                 const product = products[key];
                 
-                // Filter for the category 'plants' (case insensitive)
-                if (product.category && product.category.toLowerCase() === 'manureandfertailizer') {
+                // Filter for the category 'Manure and Fertilizer' (case insensitive)
+                if (product.category && product.category.toLowerCase() === 'manure and fertilizer') {
                     const listItem = document.createElement('li');
                     listItem.classList.add('product');
                     
@@ -43,7 +45,7 @@ async function loadProducts() {
                         <div class="product-contents">
                             <div class="product-image">
                                 <a href="shop-single.html?id=${key}">
-                                    <img src="${product.mainImageURL}" alt="Product" class="w-full h-auto">
+                                    <img src="${product.mainImageURL || 'default-image.jpg'}" alt="Product" class="w-full h-auto">
                                 </a>
                                 <div class="shop-action">
                                     <ul>
@@ -58,10 +60,10 @@ async function loadProducts() {
                                 <h4 class="product-title">
                                     <a href="shop-single.html?id=${key}">${product.name}</a>
                                 </h4>
-                                <div hidden class="price">
-                                    <span   >$${product.price.toFixed(2)}</span>
+                                <div class="price">
+                                    <span>${product.price.toFixed(2)}</span>
                                 </div>
-                                <a href="shop-single.html?id=${key}" class="cart-btn"><i class="fas fa-shopping-bag"></i> View Product</a>
+                                <a href="ManureandFertailizersingle.html?id=${key}" class="cart-btn"><i class="fas fa-shopping-bag"></i> View Product</a>
                             </div>
                         </div>
                     `;
