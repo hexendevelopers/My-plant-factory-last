@@ -44,7 +44,7 @@ async function loadProducts() {
                     listItem.innerHTML = `
                         <div class="product-contents">
                             <div class="product-image">
-                                <a href="shop-single.html?id=${key}">
+                                <a  href="ManureandFertailizersingle.html?id=${key}" >
                                     <img src="${product.mainImageURL || 'default-image.jpg'}" alt="Product" class="w-full h-auto">
                                 </a>
                                 <div class="shop-action">
@@ -58,7 +58,7 @@ async function loadProducts() {
                                     <a href="#">${product.category}</a>
                                 </div>
                                 <h4 class="product-title">
-                                    <a >${product.name}</a>
+                                    <a  href="ManureandFertailizersingle.html?id=${key}" >${product.name}</a>
                                 </h4>
                                 <div class="price">
                                     <span>${product.price.toFixed(2)}</span>
