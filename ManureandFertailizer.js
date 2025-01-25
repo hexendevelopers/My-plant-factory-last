@@ -58,7 +58,7 @@ async function loadProducts() {
                                     <a href="#">${product.category}</a>
                                 </div>
                                 <h4 class="product-title">
-                                    <a href="shop-single.html?id=${key}">${product.name}</a>
+                                    <a >${product.name}</a>
                                 </h4>
                                 <div class="price">
                                     <span>${product.price.toFixed(2)}</span>
